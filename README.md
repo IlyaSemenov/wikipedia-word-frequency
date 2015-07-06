@@ -1,0 +1,1 @@
+The script processes wikipedia article dumps from https://dumps.wikimedia.org/enwiki/ and gathers the word frequency distribution data. This data can further be used for splitting **combinedwords** using Viterbi algorithm.
