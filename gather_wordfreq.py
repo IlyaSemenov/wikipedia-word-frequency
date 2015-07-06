@@ -14,7 +14,7 @@ if not len(sys.argv) > 1:
 line_trans = str.maketrans('–’', "-\'")
 words_split_re = re.compile(r'[^\w\-\']')
 is_word_re = re.compile(r'^\w.*\w$')
-not_is_word_re = re.compile(r'^[\d\'-]+$')
+not_is_word_re = re.compile(r'.*\d.*')
 
 
 # collect data
