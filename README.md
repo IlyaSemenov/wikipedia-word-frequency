@@ -20,7 +20,11 @@ Collect data:
 
 # Results
 
-The word frequency data for `enwiki-201506` is provided at [results/enwiki-20150602-words-frequency.txt](results/enwiki-20150602-words-frequency.txt).
+The word frequency data for `enwiki-201506` is provided at [results/enwiki-20150602-words-frequency.txt](results/enwiki-20150602-words-frequency.txt):
+
+* Total different words: 1.901.124
+* Total word uses: 1.562.759.958
+* Top 20 most popular words: the, of, and, in, to, was, is, for, as, on, with, by, he, that, at, from, his, it, an, were.
 
 # Viterbi data
 
