@@ -60,14 +60,5 @@ for word in list(word_uses.keys()):
 
 words = list(word_uses.keys())
 words.sort(key=lambda w: word_uses[w], reverse=True)
-with open('wordfreq.txt', 'w') as f:
-	for word in words:
-		f.write("%s %d\n" % (word, word_uses[word]))
-
-# save logarithmic pickle for Viterbi
-
-total_words = sum(word_uses.values())
-word_freq_log = {}
 for word in words:
-	word_freq_log[word] = math.log(float(word_uses[word]) / total_words)
-pickle.dump(word_freq_log, open('wordfreq_log.pickle', 'wb'))
+	print("%s %d" % (word, word_uses[word]))
