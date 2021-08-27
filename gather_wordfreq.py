@@ -8,7 +8,8 @@ import sys
 MIN_ARTICLES = 3	# number of articles where words need to appear
 line_trans = str.maketrans('–’', "-\'")
 words_split_re = re.compile(r'[^\w\-\']')
-is_word_re = re.compile(r'^\w.*\w$')
+# capture compound words (such as "non-profit") and single letter words (such as "a")
+is_word_re = re.compile(r'(^\w.*\w$)|(^\w$)')
 not_is_word_re = re.compile(r'.*\d.*')
 
 
