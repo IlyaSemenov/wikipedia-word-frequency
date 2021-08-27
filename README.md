@@ -20,11 +20,10 @@ Collect data:
 
 # Results
 
-The word frequency data for `enwiki-201903` is provided at [results/enwiki-20190320-words-frequency.txt](results/enwiki-20190320-words-frequency.txt):
+The word frequency data for `enwiki-20210820` (and previous version `enwiki-20190320`) are provided at [results](results):
 
-* Total different words: 2,184,780
-* Total word uses: 1,947,152,902
-* Top 20 most popular words: the, of, and, in, to, was, is, for, on, as, with, by, he, that, at, from, his, it, an, were.
+* Total unique words appearing at least in 3 articles: 2,676,542
+* Top 20 most popular words: the, of, in, and, a, to, was, is, for, on, as, with, by, he, that, at, from, his, it, an, were.
 
 # Viterbi data
 
