@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 from collections import defaultdict
-import math
-import pickle
 import re
 import subprocess
 import sys
 
 
-MIN_ARTICLES = 3
+MIN_ARTICLES = 3	# number of articles where words need to appear
 line_trans = str.maketrans('–’', "-\'")
 words_split_re = re.compile(r'[^\w\-\']')
-is_word_re = re.compile(r'^\w.*\w$')
+# capture compound words (such as "non-profit") and single letter words (such as "a")
+is_word_re = re.compile(r'(^\w.*\w$)|(^\w$)')
 not_is_word_re = re.compile(r'.*\d.*')
 
 
@@ -28,7 +27,7 @@ doc_no = 0
 for fn in sys.argv[1:]:
 	sys.stderr.write("Processing %s\n" % fn)
 	with subprocess.Popen(
-		"bzcat %s | wikiextractor/WikiExtractor.py --no-templates -o - -" % fn,
+		"wikiextractor --no-templates -o - %s" % fn,
 		stdout=subprocess.PIPE,
 		shell=True
 	) as proc:
@@ -50,7 +49,7 @@ for fn in sys.argv[1:]:
 					elif len(word_docs[word]) < MIN_ARTICLES:
 						word_docs[word].add(doc_no)
 
-# remove words only used once
+# remove words used less than MIN_ARTICLES
 
 for word in list(word_uses.keys()):
 	if len(word_docs[word]) < MIN_ARTICLES:
