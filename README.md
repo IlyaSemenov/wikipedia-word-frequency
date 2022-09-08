@@ -22,10 +22,11 @@ Collect data:
 
 ## Pre-generated word frequency data
 
-The word frequency data for `enwiki-20210820` (and previous version `enwiki-20190320`) are provided at [results](results):
+The word frequency data for English, Spanish, French, German, Italian, Portuguese, Dutch, Arabic, Polish, Egyptian, Japanese, Russian, Cebuano, Swedish, Ukrainian, Vietnamese, Chinese, & Waray are provided at [results](results).
 
-* Total unique words appearing at least in 3 articles: 2,676,542
-* Top 20 most popular words: the, of, in, and, a, to, was, is, for, on, as, with, by, he, that, at, from, his, it, an, were.
+English results:
+* Total unique words appearing at least in 3 articles: 2747823
+* Top 20 most popular words: the, of, in, and, a, to, was, is, on, for, as, with, by, he, that, at, from, his, it, an.
 
 ## Misc
 
