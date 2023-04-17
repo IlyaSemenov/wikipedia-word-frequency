@@ -25,13 +25,6 @@ Collect data:
 The word frequency data for English, Spanish, French, German, Italian, Portuguese, Dutch, Arabic, Polish, Egyptian, Japanese, Russian, Cebuano, Swedish, Ukrainian, Vietnamese, Chinese, & Waray are provided at [results](results).
 
 English results:
+
 * Total unique words appearing at least in 3 articles: 2747823
 * Top 20 most popular words: the, of, in, and, a, to, was, is, on, for, as, with, by, he, that, at, from, his, it, an.
-
-## Misc
-
-### Viterbi data
-
-There is a little script included that converts text data into pickled dict of the logarithm of every word's probability, which can further be used for splitting _combinedwords_ using [Viterbi algorithm](https://en.wikipedia.org/wiki/Viterbi_algorithm).
-
-    ./wordfreq_to_viterbi.py < wordfreq.txt > wordfreq_log.pickle
