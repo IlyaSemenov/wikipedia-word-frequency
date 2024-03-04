@@ -10,15 +10,23 @@ The script needs Python 3. On macOS, [there is a known bug with Python 3.8](http
 
 Install requirements:
 
-    pip install -r requirements.txt
+```sh
+pip install -r requirements.txt
+```
 
 Download the current Wikipedia dumps (Note that as of April 2023, this will require about 19 Gb of free space):
 
-    wget -np -r --accept-regex 'https:\/\/dumps\.wikimedia\.org\/enwiki\/latest\/enwiki-latest-pages-articles[0-9]+\..*' https://dumps.wikimedia.org/enwiki/latest/
+```sh
+wget -np -r --accept-regex \
+  'https:\/\/dumps\.wikimedia\.org\/enwiki\/latest\/enwiki-latest-pages-articles[0-9]+\..*' \
+  https://dumps.wikimedia.org/enwiki/latest/
+```
 
 Collect data:
 
-    python ./gather_wordfreq.py dumps.wikimedia.org/enwiki/latest/*.bz2 > wordfreq.txt
+```sh
+python ./gather_wordfreq.py dumps.wikimedia.org/enwiki/latest/*.bz2 > wordfreq.txt
+```
 
 ## Pre-generated word frequency data
 
