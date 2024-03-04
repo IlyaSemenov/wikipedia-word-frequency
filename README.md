@@ -22,7 +22,7 @@ Collect data:
 
 ## Pre-generated word frequency data
 
-The word frequency data for English, Spanish, French, German, Italian, Portuguese, Dutch, Arabic, Polish, Egyptian, Japanese, Russian, Cebuano, Swedish, Ukrainian, Vietnamese, Chinese, & Waray are provided at [results](results).
+The word frequency data for English, Spanish, French, German, Italian, Portuguese, Dutch, Arabic, Polish, Egyptian, Japanese, Russian, Cebuano, Swedish, Ukrainian, Vietnamese, Chinese, Waray, Afrikaans & Swahili are provided at [results](results).
 
 English results:
 
