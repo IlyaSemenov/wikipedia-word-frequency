@@ -14,18 +14,21 @@ Install requirements:
 pip install -r requirements.txt
 ```
 
-Download the current Wikipedia dumps (Note that as of April 2023, this will require about 19 Gb of free space):
+Download the current Wikipedia dumps for the desired language:
 
 ```sh
+WIKI=enwiki
 wget -np -r --accept-regex \
-  'https:\/\/dumps\.wikimedia\.org\/enwiki\/latest\/enwiki-latest-pages-articles[0-9]+\..*' \
-  https://dumps.wikimedia.org/enwiki/latest/
+  "https:\/\/dumps\.wikimedia\.org\/${WIKI}\/latest\/${WIKI}-latest-pages-articles[0-9]*\.xml.bz2" \
+  https://dumps.wikimedia.org/${WIKI}/latest/
 ```
 
-Collect data:
+_Note that for enwiki (as of April 2023) this will require about 19 Gb of free space._
+
+Parse dumps and save results:
 
 ```sh
-python ./gather_wordfreq.py dumps.wikimedia.org/enwiki/latest/*.bz2 > wordfreq.txt
+python ./gather_wordfreq.py dumps.wikimedia.org/${WIKI}/latest/*.bz2 > wordfreq.txt
 ```
 
 ## Pre-generated word frequency data
