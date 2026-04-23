@@ -33,7 +33,27 @@ python ./gather_wordfreq.py dumps.wikimedia.org/${WIKI}/latest/*.bz2 > wordfreq.
 
 ## Pre-generated word frequency data
 
-The word frequency data for English, Spanish, French, German, Italian, Portuguese, Dutch, Arabic, Polish, Egyptian, Japanese, Russian, Cebuano, Swedish, Ukrainian, Vietnamese, Chinese, Waray, Afrikaans & Swahili are provided at [results](results).
+Word frequency data for the following languages is available in [results](results):
+
+* Afrikaans
+* Arabic
+* Cebuano
+* Chinese
+* Dutch
+* English
+* French
+* German
+* Italian
+* Japanese
+* Persian
+* Polish
+* Portuguese
+* Russian
+* Spanish
+* Swahili
+* Swedish
+* Ukrainian
+* Vietnamese
 
 English results:
 
