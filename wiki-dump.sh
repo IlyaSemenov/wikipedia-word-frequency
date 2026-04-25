@@ -31,10 +31,18 @@ usage() {
 while [[ "$#" -gt 0 ]]; do
     case $1 in
         -w|--wiki)
+            if [[ -z "$2" ]]; then
+                echo "Error: --wiki requires an argument"
+                exit 1
+            fi
             WIKI="$2"
             shift 2
             ;;
         -e|--extra)
+            if [[ -z "$2" ]]; then
+                echo "Error: --extra requires an argument"
+                exit 1
+            fi
             WGET_EXTRA_OPTS="$2"
             shift 2
             ;;
@@ -43,7 +51,7 @@ while [[ "$#" -gt 0 ]]; do
             ;;
         *)
             echo "Error: Unknown parameter passed: $1"
-            usage
+            exit 1
             ;;
     esac
 done

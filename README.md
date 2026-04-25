@@ -9,7 +9,7 @@ The script was inspired by [this article](http://imonad.com/seo/wikipedia-word-f
 ### Option 1: Docker (Recommended)
 Using Docker is the easiest way to run this project. It handles all dependencies, bypasses OS-specific bugs (like the macOS Python 3.8 issue), and uses Docker volumes to safely manage the large dump files.
 
-#### 1.Build the Docker Image
+#### 1. Build the Docker Image
 From the root of your project directory, run:
 
 ```sh
@@ -33,8 +33,9 @@ Parse dumps and save results:
 
 ```sh
 docker run -v $(pwd)/output:/data wiki-wordfreq python /app/gather_wordfreq.py /data/dumps.wikimedia.org/enwiki/latest/*.bz2 > output/wordfreq.txt
-(Note: You can change enwiki to any other language code, like dewiki or frwiki, in both commands).
 ```
+
+You can change `enwiki` to any other language code, like `dewiki` or `frwiki`, in both commands.
 
 ### Option 2: Local Installation
 
@@ -54,13 +55,12 @@ Download the current Wikipedia dumps for the desired language:
 
 (You can also use the raw wget command directly if you prefer).
 
-
 _Note that for enwiki (as of April 2023) this will require about 19 Gb of free space._
 
 Parse dumps and save results:
 
 ```sh
-python ./gather_wordfreq.py dumps.wikimedia.org/${WIKI}/latest/*.bz2 > wordfreq.txt
+python ./gather_wordfreq.py dumps.wikimedia.org/${WIKI:-enwiki}/latest/*.bz2 > wordfreq.txt
 ```
 
 ## Pre-generated word frequency data
@@ -90,4 +90,4 @@ Word frequency data for the following languages is available in [results](result
 English results:
 
 * Total unique words appearing at least in 3 articles: 2747823
-* Top 20 most popular words: the, of, in, and, a, to, was, is, on, for, as, with, by, he, that, at, from, his, it, an.
+* Top 20 most popular words: the, of, in, and, a, to, was, is, on, for, as, with, by, he, that, at, from, his, it, an.
