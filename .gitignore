@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# virtual env files
+.venv/
+
+# Installer logs
+pip-log.txt
+
+# dump folder
+dumps.wikimedia.org/
